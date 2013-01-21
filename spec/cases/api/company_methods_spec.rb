@@ -26,7 +26,7 @@ describe LinkedIn::Api::CompanyMethods do
       
       it "should get a valid company" do
         result.id.should == 162479
-        result.name.should == 'Apple Inc.'
+        result.name.should == 'Apple'
       end
     end
     
@@ -39,10 +39,10 @@ describe LinkedIn::Api::CompanyMethods do
       
       it "should get a valid company" do
         result.id.should == 162479
-        result.name.should == 'Apple Inc.'
-        result.universal_name.should == 'apple-inc'
-        result.industry.should == 'Computer Hardware'
-        result.logo_url.should == 'http://media.linkedin.com/mpr/mpr/p/2/000/082/2e6/39570d2.png'
+        result.name.should == 'Apple'
+        result.universal_name.should == 'apple'
+        result.industry.should == 'Consumer Electronics'
+        result.logo_url.should == 'http://m3.licdn.com/mpr/mpr/p/6/000/1b4/31c/0f3abe4.png'
         result.email_domains.all.size.should == 30
       end
     end
@@ -51,12 +51,12 @@ describe LinkedIn::Api::CompanyMethods do
       use_vcr_cassette :record => :new_episodes
       
       let(:result) do
-        client.company(:universal_name => 'apple-inc')
+        client.company(:universal_name => 'apple')
       end
       
       it "should get a valid company" do
         result.id.should == 162479
-        result.name.should == 'Apple Inc.'
+        result.name.should == 'Apple'
       end
     end
     
@@ -83,7 +83,7 @@ describe LinkedIn::Api::CompanyMethods do
       it "should get a valid list of companies" do
         results.all.size.should == 2
         results.all.first.id.should == 162479
-        results.all.first.name.should == 'Apple Inc.'
+        results.all.first.name.should == 'Apple'
         results.all.last.id.should == 1276
         results.all.last.name.should == 'Apple Retail'
       end
@@ -103,7 +103,7 @@ describe LinkedIn::Api::CompanyMethods do
       it "should perform a search" do
         result.companies.all.size.should == 10
         result.companies.all.first.id.should == 162479
-        result.companies.all.first.name.should == 'Apple Inc.'
+        result.companies.all.first.name.should == 'Apple'
       end
     end
     
@@ -115,7 +115,7 @@ describe LinkedIn::Api::CompanyMethods do
       end
       
       it "should perform a search" do
-        result.companies.all.size.should == 2
+        result.companies.all.size.should == 3
         result.companies.all.first.id.should == 203563
         result.companies.all.first.name.should == 'Ci&T'
       end
@@ -130,10 +130,10 @@ describe LinkedIn::Api::CompanyMethods do
       
       it "should perform a search" do
         result.companies.all.size.should == 1
-        result.companies.all.first.name.should == 'Apple Inc.'
-        result.companies.all.first.universal_name.should == 'apple-inc'
-        result.companies.all.first.industry.should == 'Computer Hardware'
-        result.companies.all.first.logo_url.should == 'http://media.linkedin.com/mpr/mpr/p/2/000/082/2e6/39570d2.png'
+        result.companies.all.first.name.should == 'Apple'
+        result.companies.all.first.universal_name.should == 'apple'
+        result.companies.all.first.industry.should == 'Consumer Electronics'
+        result.companies.all.first.logo_url.should == 'http://m3.licdn.com/mpr/mpr/p/6/000/1b4/31c/0f3abe4.png'
         result.companies.all.first.email_domains.all.size.should == 30
       end
     end

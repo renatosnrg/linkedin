@@ -1,68 +1,40 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: https://api.linkedin.com:443/v1/companies/162479:(id,name,universal-name,email-domains,logo-url,industry)
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      content-type: 
-      - application/json;charset=UTF-8
-      server: 
+    headers:
+      server:
       - Apache-Coyote/1.1
-      date: 
-      - Thu, 09 Jun 2011 15:30:02 GMT
-      x-li-format: 
+      x-li-request-id:
+      - TRIS52GNE9
+      vary:
+      - ! '*'
+      x-li-format:
       - json
-      vary: 
-      - x-li-format,Accept-Encoding
-      transfer-encoding: 
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
       - chunked
-    body: |-
-      {
-        "universalName": "apple-inc",
-        "id": 162479,
-        "name": "Apple Inc.",
-        "emailDomains": {
-          "values": [
-            "asia.apple.com",
-            "research.apple.com",
-            "topcall3.corp.apple.com",
-            "newton.apple.com",
-            "lists.apple.com",
-            "solutions.apple.com",
-            "apple.com",
-            "appplelink.apple.com",
-            "msgate.corp.apple.com",
-            "taurus.apple.com",
-            "services.apple.com",
-            "aruba.apple.com",
-            "applelink.apple.com",
-            "qmgate.corp.apple.com",
-            "msgate.apple.com",
-            "applelindk.apple.com",
-            "applink.apple.com",
-            "applenews.lists.apple.com",
-            "applelinl.apple.com",
-            "powertalk.apple.com",
-            "euromailer.lists.apple.com",
-            "pico.apple.com",
-            "online.apple.com",
-            "list.seminars.apple.com",
-            "aoce.austin.apple.com",
-            "austin.apple.com",
-            "mail.apple.com",
-            "atg.apple.com",
-            "group.apple.com",
-            "euro.apple.com"
-          ],
-          "_total": 30
-        },
-        "logoUrl": "http://media.linkedin.com/mpr/mpr/p/2/000/082/2e6/39570d2.png",
-        "industry": "Computer Hardware"
-      }
-    http_version: "1.1"
+      date:
+      - Mon, 21 Jan 2013 14:24:59 GMT
+    body: ! "{\n  \"emailDomains\": {\n    \"_total\": 30,\n    \"values\": [\n      \"asia.apple.com\",\n
+      \     \"research.apple.com\",\n      \"topcall3.corp.apple.com\",\n      \"newton.apple.com\",\n
+      \     \"lists.apple.com\",\n      \"apple.com\",\n      \"solutions.apple.com\",\n
+      \     \"appplelink.apple.com\",\n      \"msgate.corp.apple.com\",\n      \"services.apple.com\",\n
+      \     \"taurus.apple.com\",\n      \"aruba.apple.com\",\n      \"applelink.apple.com\",\n
+      \     \"qmgate.corp.apple.com\",\n      \"msgate.apple.com\",\n      \"applelindk.apple.com\",\n
+      \     \"applink.apple.com\",\n      \"applenews.lists.apple.com\",\n      \"applelinl.apple.com\",\n
+      \     \"powertalk.apple.com\",\n      \"euromailer.lists.apple.com\",\n      \"pico.apple.com\",\n
+      \     \"online.apple.com\",\n      \"list.seminars.apple.com\",\n      \"aoce.austin.apple.com\",\n
+      \     \"austin.apple.com\",\n      \"mail.apple.com\",\n      \"atg.apple.com\",\n
+      \     \"group.apple.com\",\n      \"euro.apple.com\"\n    ]\n  },\n  \"id\":
+      162479,\n  \"industry\": \"Consumer Electronics\",\n  \"logoUrl\": \"http://m3.licdn.com/mpr/mpr/p/6/000/1b4/31c/0f3abe4.png\",\n
+      \ \"name\": \"Apple\",\n  \"universalName\": \"apple\"\n}"
+    http_version: '1.1'

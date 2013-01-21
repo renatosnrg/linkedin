@@ -1,39 +1,38 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
-    uri: https://api.linkedin.com:443/v1/people-search:(people:(id,first-name,last-name,public-profile-url,picture-url),num-results)?first-name=Giliardi&last-name=Pires
+    uri: https://api.linkedin.com:443/v1/people-search:(people:(id,first-name,last-name,public-profile-url,picture-url),num-results)?first-name=Reid&last-name=Hoffman
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      content-type: 
-      - application/json;charset=UTF-8
-      server: 
+    headers:
+      server:
       - Apache-Coyote/1.1
-      date: 
-      - Thu, 09 Jun 2011 15:30:23 GMT
-      x-li-format: 
+      x-li-request-id:
+      - QA9ICH4RS2
+      vary:
+      - ! '*'
+      x-li-format:
       - json
-      vary: 
-      - x-li-format,Accept-Encoding
-      transfer-encoding: 
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
       - chunked
-    body: |-
-      {
-        "numResults": 1,
-        "people": {
-          "values": [{
-            "id": "YkdnFl04s_",
-            "publicProfileUrl": "http://www.linkedin.com/in/gibanet",
-            "lastName": "Pires",
-            "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_Oz05kn9xkWziAEOUKtOVkqzjXd8Clf7UyqIVkqchR2NtmwZRt1fWoN_aobhg-HmB09jUwPLKrAhU",
-            "firstName": "Giliardi"
-          }],
-          "_total": 1
-        }
-      }
-    http_version: "1.1"
+      date:
+      - Mon, 21 Jan 2013 14:25:27 GMT
+    body: ! "{\n  \"numResults\": 4,\n  \"people\": {\n    \"_total\": 4,\n    \"values\":
+      [\n      {\n        \"firstName\": \"Reid\",\n        \"id\": \"_nP1v4zwu4\",\n
+      \       \"lastName\": \"Hoffman\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_ePvupfQ_rPjMy-iielQ0pub2r-Zdp-tiENT1pSkPfNuJin5_Xv58tDrgO049xzPfWKBt1onPUqEb\",\n
+      \       \"publicProfileUrl\": \"http://www.linkedin.com/in/reidhoffman\"\n      },\n
+      \     {\n        \"firstName\": \"Reid\",\n        \"id\": \"FvGAdAgeCC\",\n
+      \       \"lastName\": \"Hoffman\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/reid-hoffman/6/b26/484\"\n
+      \     },\n      {\n        \"firstName\": \"Reid\",\n        \"id\": \"lI4zxNCd8Z\",\n
+      \       \"lastName\": \"Hoffman\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/reid-hoffman/49/b31/543\"\n
+      \     },\n      {\n        \"firstName\": \"reid\",\n        \"id\": \"poGf9VHIBm\",\n
+      \       \"lastName\": \"hoffman\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/reid-hoffman/59/442/25a\"\n
+      \     }\n    ]\n  }\n}"
+    http_version: '1.1'

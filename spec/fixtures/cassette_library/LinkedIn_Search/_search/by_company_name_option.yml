@@ -1,86 +1,45 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: https://api.linkedin.com:443/v1/people-search?company-name=linkedin
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
-      message: OK
-    headers: 
-      content-type: 
-      - application/json;charset=UTF-8
-      server: 
-      - Apache-Coyote/1.1
-      date: 
-      - Thu, 09 Jun 2011 15:30:24 GMT
-      x-li-format: 
-      - json
-      vary: 
-      - x-li-format,Accept-Encoding
-      transfer-encoding: 
-      - chunked
-    body: |-
-      {
-        "numResults": 5836,
-        "people": {
-          "values": [
-            {
-              "id": "VQcsz5Hp_h",
-              "lastName": "Denker",
-              "firstName": "Donald"
-            },
-            {
-              "id": "YEDghC612B",
-              "lastName": "S.",
-              "firstName": "Daniel"
-            },
-            {
-              "id": "KMioNXVEg9",
-              "lastName": "H.",
-              "firstName": "Reid"
-            },
-            {
-              "id": "ILGTOKmto4",
-              "lastName": "Ruff",
-              "firstName": "Lori"
-            },
-            {
-              "id": "xr5jcMXKPm",
-              "lastName": "C.",
-              "firstName": "Ed"
-            },
-            {
-              "id": "aeejoSqHsN",
-              "lastName": "T.",
-              "firstName": "Brian"
-            },
-            {
-              "id": "VYC0P9hxVN",
-              "lastName": "Giffen",
-              "firstName": "Sean"
-            },
-            {
-              "id": "kWPJPI1lrJ",
-              "lastName": "Seps",
-              "firstName": "Chad"
-            },
-            {
-              "id": "1PYJr69P5V",
-              "lastName": "Vasconcelos",
-              "firstName": "Cesar"
-            },
-            {
-              "id": "AU5Dv63Fma",
-              "lastName": "Ling",
-              "firstName": "James"
-            }
-          ],
-          "_count": 10,
-          "_start": 0,
-          "_total": 110
-        }
-      }
-    http_version: "1.1"
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "c2VydmVy":
+      - !binary |-
+        QXBhY2hlLUNveW90ZS8xLjE=
+      !binary "eC1saS1yZXF1ZXN0LWlk":
+      - !binary |-
+        OTdXMlYzTzVBSA==
+      !binary "dmFyeQ==":
+      - !binary |-
+        Kg==
+      !binary "eC1saS1mb3JtYXQ=":
+      - !binary |-
+        anNvbg==
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PVVURi04
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        TW9uLCAyMSBKYW4gMjAxMyAxNDoyNToyOSBHTVQ=
+    body: !binary |-
+      ewogICJudW1SZXN1bHRzIjogMywKICAicGVvcGxlIjogewogICAgIl90b3Rh
+      bCI6IDMsCiAgICAidmFsdWVzIjogWwogICAgICB7CiAgICAgICAgImZpcnN0
+      TmFtZSI6ICJKYW1lcyIsCiAgICAgICAgImlkIjogIklUTjRzY1FZQmgiLAog
+      ICAgICAgICJsYXN0TmFtZSI6ICJMaW5nIgogICAgICB9LAogICAgICB7CiAg
+      ICAgICAgImZpcnN0TmFtZSI6ICJDw6lzYXIiLAogICAgICAgICJpZCI6ICJt
+      TXNUMmpMT1hMIiwKICAgICAgICAibGFzdE5hbWUiOiAiVmFzY29uY2Vsb3Mi
+      CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiZmlyc3ROYW1lIjogIkpvbmF0
+      aGFuIiwKICAgICAgICAiaWQiOiAiX0VkM0lWZG1WeiIsCiAgICAgICAgImxh
+      c3ROYW1lIjogIkxhaSIKICAgICAgfQogICAgXQogIH0KfQ==
+    http_version: '1.1'

@@ -21,7 +21,7 @@ describe LinkedIn::Search do
       use_vcr_cassette :record => :new_episodes
       
       let(:results) do
-        client.search('github')
+        client.search('apple')
       end
       
       it "should perform a search" do
@@ -36,7 +36,7 @@ describe LinkedIn::Search do
       use_vcr_cassette :record => :new_episodes
       
       let(:results) do
-        client.search(:keywords => 'github')
+        client.search(:keywords => 'apple')
       end
       
       it "should perform a search" do
@@ -51,7 +51,7 @@ describe LinkedIn::Search do
       use_vcr_cassette :record => :new_episodes
       
       let(:results) do
-        client.search(:keywords => 'josé')
+        client.search(:keywords => 'jose')
       end
       
       it "should perform a search" do
@@ -66,7 +66,7 @@ describe LinkedIn::Search do
       use_vcr_cassette :record => :new_episodes
       
       let(:results) do
-        client.search(:keywords => 'github', :start => 5, :count => 5)
+        client.search(:keywords => 'apple', :start => 5, :count => 5)
       end
       
       it "should perform a search" do
@@ -84,14 +84,14 @@ describe LinkedIn::Search do
       use_vcr_cassette :record => :new_episodes
       
       let(:results) do
-        client.search(:first_name => 'Giliardi', :last_name => 'Pires')
+        client.search(:first_name => 'Reid', :last_name => 'Hoffman')
       end
       
       it "should perform a search" do
-        results.people.all.size.should == 1
-        results.people.all.first.first_name.should == 'Giliardi'
-        results.people.all.first.last_name.should == 'Pires'
-        results.people.all.first.id.should == 'YkdnFl04s_'
+        results.people.all.size.should == 4
+        results.people.all.first.first_name.should == 'Reid'
+        results.people.all.first.last_name.should == 'Hoffman'
+        results.people.all.first.id.should == '_nP1v4zwu4'
       end
     end
     
@@ -100,16 +100,16 @@ describe LinkedIn::Search do
       
       let(:results) do
         fields = [{:people => [:id, :first_name, :last_name, :public_profile_url, :picture_url]}, :num_results]
-        client.search(:first_name => 'Giliardi', :last_name => 'Pires', :fields => fields)
+        client.search(:first_name => 'Reid', :last_name => 'Hoffman', :fields => fields)
       end
       
       it "should perform a search" do
-        results.people.all.size.should == 1
-        results.people.all.first.first_name.should == 'Giliardi'
-        results.people.all.first.last_name.should == 'Pires'
-        results.people.all.first.id.should == 'YkdnFl04s_'
-        results.people.all.first.picture_url.should == 'http://media.linkedin.com/mpr/mprx/0_Oz05kn9xkWziAEOUKtOVkqzjXd8Clf7UyqIVkqchR2NtmwZRt1fWoN_aobhg-HmB09jUwPLKrAhU'
-        results.people.all.first.public_profile_url.should == 'http://www.linkedin.com/in/gibanet'
+        results.people.all.size.should == 4
+        results.people.all.first.first_name.should == 'Reid'
+        results.people.all.first.last_name.should == 'Hoffman'
+        results.people.all.first.id.should == '_nP1v4zwu4'
+        results.people.all.first.picture_url.should == 'http://m3.licdn.com/mpr/mprx/0_ePvupfQ_rPjMy-iielQ0pub2r-Zdp-tiENT1pSkPfNuJin5_Xv58tDrgO049xzPfWKBt1onPUqEb'
+        results.people.all.first.public_profile_url.should == 'http://www.linkedin.com/in/reidhoffman'
       end
     end
     
@@ -121,7 +121,7 @@ describe LinkedIn::Search do
       end
       
       it "should perform a search" do
-        results.people.all.size.should == 10
+        results.people.all.size.should == 3
         results.people.all.first.should respond_to(:first_name)
         results.people.all.first.should respond_to(:last_name)
         results.people.all.first.should respond_to(:id)

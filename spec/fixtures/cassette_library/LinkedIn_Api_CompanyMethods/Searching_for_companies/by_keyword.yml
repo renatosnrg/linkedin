@@ -1,148 +1,63 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: https://api.linkedin.com:443/v1/company-search?keywords=Apple
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      content-type: 
-      - application/json;charset=UTF-8
-      server: 
+    headers:
+      server:
       - Apache-Coyote/1.1
-      date: 
-      - Thu, 09 Jun 2011 15:30:09 GMT
-      x-li-format: 
+      x-li-request-id:
+      - WSD18J3XEN
+      vary:
+      - ! '*'
+      x-li-format:
       - json
-      vary: 
-      - x-li-format,Accept-Encoding
-      transfer-encoding: 
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
       - chunked
-    body: |-
-      {
-        "facets": {
-          "values": [{
-            "buckets": {
-              "values": [
-                {
-                  "selected": false,
-                  "count": 1565,
-                  "name": "United States",
-                  "code": "us:0"
-                },
-                {
-                  "selected": false,
-                  "count": 405,
-                  "name": "United Kingdom",
-                  "code": "gb:0"
-                },
-                {
-                  "selected": false,
-                  "count": 203,
-                  "name": "San Francisco Bay Area",
-                  "code": "us:84"
-                },
-                {
-                  "selected": false,
-                  "count": 183,
-                  "name": "Netherlands",
-                  "code": "nl:0"
-                },
-                {
-                  "selected": false,
-                  "count": 180,
-                  "name": "Greater New York City Area",
-                  "code": "us:70"
-                },
-                {
-                  "selected": false,
-                  "count": 165,
-                  "name": "Canada",
-                  "code": "ca:0"
-                },
-                {
-                  "selected": false,
-                  "count": 106,
-                  "name": "Greater Los Angeles Area",
-                  "code": "us:49"
-                },
-                {
-                  "selected": false,
-                  "count": 96,
-                  "name": "Australia",
-                  "code": "au:0"
-                },
-                {
-                  "selected": false,
-                  "count": 96,
-                  "name": "London, United Kingdom",
-                  "code": "gb:4573"
-                },
-                {
-                  "selected": false,
-                  "count": 93,
-                  "name": "India",
-                  "code": "in:0"
-                }
-              ],
-              "_total": 10
-            },
-            "name": "Location",
-            "code": "location"
-          }],
-          "_total": 1
-        },
-        "numResults": 4562,
-        "companies": {
-          "values": [
-            {
-              "id": 162479,
-              "name": "Apple Inc."
-            },
-            {
-              "id": 1276,
-              "name": "Apple Retail"
-            },
-            {
-              "id": 1373,
-              "name": "Xerox"
-            },
-            {
-              "id": 19271,
-              "name": "Apple Vacations"
-            },
-            {
-              "id": 163801,
-              "name": "FileMaker"
-            },
-            {
-              "id": 772044,
-              "name": "Stone Apple Solutions"
-            },
-            {
-              "id": 88452,
-              "name": "Apple REIT Companies"
-            },
-            {
-              "id": 112136,
-              "name": "Apple & Associates"
-            },
-            {
-              "id": 21482,
-              "name": "GHA Technologies"
-            },
-            {
-              "id": 165158,
-              "name": "Netflix"
-            }
-          ],
-          "_count": 10,
-          "_start": 0,
-          "_total": 4562
-        }
-      }
-    http_version: "1.1"
+      date:
+      - Mon, 21 Jan 2013 14:25:07 GMT
+    body: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n    \"_total\":
+      7632,\n    \"values\": [\n      {\n        \"id\": 162479,\n        \"name\":
+      \"Apple\"\n      },\n      {\n        \"id\": 1276,\n        \"name\": \"Apple
+      Retail\"\n      },\n      {\n        \"id\": 19271,\n        \"name\": \"Apple
+      Vacations\"\n      },\n      {\n        \"id\": 778626,\n        \"name\": \"Big
+      Apple Holdings, Inc. dba Big Apple International Realty\"\n      },\n      {\n
+      \       \"id\": 112136,\n        \"name\": \"Apple & Associates\"\n      },\n
+      \     {\n        \"id\": 772044,\n        \"name\": \"Stone Apple Solutions\"\n
+      \     },\n      {\n        \"id\": 2135525,\n        \"name\": \"iSquare - Apple
+      Authorized Distributor in Greece & Cyprus\"\n      },\n      {\n        \"id\":
+      2303504,\n        \"name\": \"Filex Apple Store & Support\"\n      },\n      {\n
+      \       \"id\": 2419290,\n        \"name\": \"Apple Nieuws Vlaanderen\"\n      },\n
+      \     {\n        \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n
+      \   ]\n  },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":
+      {\n        \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
+      \"us:0\",\n            \"count\": 2339,\n            \"name\": \"United States\",\n
+      \           \"selected\": false\n          },\n          {\n            \"code\":
+      \"gb:0\",\n            \"count\": 650,\n            \"name\": \"United Kingdom\",\n
+      \           \"selected\": false\n          },\n          {\n            \"code\":
+      \"us:84\",\n            \"count\": 305,\n            \"name\": \"San Francisco
+      Bay Area\",\n            \"selected\": false\n          },\n          {\n            \"code\":
+      \"nl:0\",\n            \"count\": 262,\n            \"name\": \"Netherlands\",\n
+      \           \"selected\": false\n          },\n          {\n            \"code\":
+      \"us:70\",\n            \"count\": 259,\n            \"name\": \"Greater New
+      York City Area\",\n            \"selected\": false\n          },\n          {\n
+      \           \"code\": \"ca:0\",\n            \"count\": 245,\n            \"name\":
+      \"Canada\",\n            \"selected\": false\n          },\n          {\n            \"code\":
+      \"au:0\",\n            \"count\": 177,\n            \"name\": \"Australia\",\n
+      \           \"selected\": false\n          },\n          {\n            \"code\":
+      \"in:0\",\n            \"count\": 170,\n            \"name\": \"India\",\n            \"selected\":
+      false\n          },\n          {\n            \"code\": \"it:0\",\n            \"count\":
+      164,\n            \"name\": \"Italy\",\n            \"selected\": false\n          },\n
+      \         {\n            \"code\": \"us:49\",\n            \"count\": 163,\n
+      \           \"name\": \"Greater Los Angeles Area\",\n            \"selected\":
+      false\n          }\n        ]\n      },\n      \"code\": \"location\",\n      \"name\":
+      \"Location\"\n    }]\n  },\n  \"numResults\": 7632\n}"
+    http_version: '1.1'

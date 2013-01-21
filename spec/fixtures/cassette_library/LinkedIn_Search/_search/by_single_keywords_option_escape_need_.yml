@@ -1,27 +1,63 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
-    uri: https://api.linkedin.com:443/v1/people-search?keywords=jos%C3%A9
+    uri: https://api.linkedin.com:443/v1/people-search?keywords=jose
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
-      message: OK
-    headers: 
-      content-type: 
-      - application/json;charset=UTF-8
-      server: 
-      - Apache-Coyote/1.1
-      date: 
-      - Thu, 09 Jun 2011 15:30:18 GMT
-      x-li-format: 
-      - json
-      vary: 
-      - x-li-format,Accept-Encoding
-      transfer-encoding: 
-      - chunked
-    body: "{\n  \"numResults\": 605349,\n  \"people\": {\n    \"values\": [\n      {\n        \"id\": \"8SdLYrOM7u\",\n        \"lastName\": \"Ramalho\",\n        \"firstName\": \"Jose\"\n      },\n      {\n        \"id\": \"qKqmauqRu8\",\n        \"lastName\": \"Alvarez V\xC3\xA1zquez\",\n        \"firstName\": \"Jos\xC3\xA9\"\n      },\n      {\n        \"id\": \"6YWynOGxRJ\",\n        \"lastName\": \"Prado\",\n        \"firstName\": \"Jose\"\n      },\n      {\n        \"id\": \"HgFSwBtkAw\",\n        \"lastName\": \"Pacheco\",\n        \"firstName\": \"Jos\xC3\xA9 Henrique\"\n      },\n      {\n        \"id\": \"nuJwNG5Hkg\",\n        \"lastName\": \"Queiroz\",\n        \"firstName\": \"Jos\xC3\xA9\"\n      },\n      {\n        \"id\": \"O6CdHmzIMQ\",\n        \"lastName\": \"Cardarelli\",\n        \"firstName\": \"Jos\xC3\xA9 Roberto\"\n      },\n      {\n        \"id\": \"3ZS0PjMk59\",\n        \"lastName\": \"Palazzo M. de Oliveira\",\n        \"firstName\": \"Jos\xC3\xA9\"\n      },\n      {\n        \"id\": \"Uvz04XMPUA\",\n        \"lastName\": \"Carvalho\",\n        \"firstName\": \"Jos\xC3\xA9 Oscar Fontanini\"\n      },\n      {\n        \"id\": \"b2gFVUcJ2e\",\n        \"lastName\": \"de Souza Lima\",\n        \"firstName\": \"Jose Mario\"\n      },\n      {\n        \"id\": \"wRr525rL-3\",\n        \"lastName\": \"Furtado\",\n        \"firstName\": \"Jose Antonio\"\n      }\n    ],\n    \"_count\": 10,\n    \"_start\": 0,\n    \"_total\": 110\n  }\n\
-      }"
-    http_version: "1.1"
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "c2VydmVy":
+      - !binary |-
+        QXBhY2hlLUNveW90ZS8xLjE=
+      !binary "eC1saS1yZXF1ZXN0LWlk":
+      - !binary |-
+        U1JaSldOUFJISA==
+      !binary "dmFyeQ==":
+      - !binary |-
+        Kg==
+      !binary "eC1saS1mb3JtYXQ=":
+      - !binary |-
+        anNvbg==
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PVVURi04
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        TW9uLCAyMSBKYW4gMjAxMyAxNDoyNToyMCBHTVQ=
+    body: !binary |-
+      ewogICJudW1SZXN1bHRzIjogNTYsCiAgInBlb3BsZSI6IHsKICAgICJfY291
+      bnQiOiAxMCwKICAgICJfc3RhcnQiOiAwLAogICAgIl90b3RhbCI6IDU2LAog
+      ICAgInZhbHVlcyI6IFsKICAgICAgewogICAgICAgICJmaXJzdE5hbWUiOiAi
+      Sm9zw6kgTWFyw61hIiwKICAgICAgICAiaWQiOiAiN2ZpOFdxWHlZSyIsCiAg
+      ICAgICAgImxhc3ROYW1lIjogIkFiZXJnIENvYm8iCiAgICAgIH0sCiAgICAg
+      IHsKICAgICAgICAiZmlyc3ROYW1lIjogIkpvc8OpIiwKICAgICAgICAiaWQi
+      OiAiVGQ5ZDBxUUhrQyIsCiAgICAgICAgImxhc3ROYW1lIjogIlZpbGxhciIK
+      ICAgICAgfSwKICAgICAgewogICAgICAgICJmaXJzdE5hbWUiOiAiSm9zZSIs
+      CiAgICAgICAgImlkIjogIjRPeGlPa0J2WW4iLAogICAgICAgICJsYXN0TmFt
+      ZSI6ICJHYXJjaWEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiZmlyc3RO
+      YW1lIjogIkpvc2UiLAogICAgICAgICJpZCI6ICJPaVVGTS05OE5RIiwKICAg
+      ICAgICAibGFzdE5hbWUiOiAiUmFtYWxobyIKICAgICAgfSwKICAgICAgewog
+      ICAgICAgICJmaXJzdE5hbWUiOiAiSm9zZSBJZ25hY2lvIiwKICAgICAgICAi
+      aWQiOiAiY1BCc2VrVWVMVyIsCiAgICAgICAgImxhc3ROYW1lIjogIk1vcmVu
+      byIKICAgICAgfSwKICAgICAgewogICAgICAgICJmaXJzdE5hbWUiOiAiSm9z
+      w6kgQW5nZWxvIiwKICAgICAgICAiaWQiOiAiTlZrZmwtSW1PSCIsCiAgICAg
+      ICAgImxhc3ROYW1lIjogIkdhbWJhcm9uaSIKICAgICAgfSwKICAgICAgewog
+      ICAgICAgICJmaXJzdE5hbWUiOiAiSm9zZSBDYXJsb3MiLAogICAgICAgICJp
+      ZCI6ICJzOWwxSjdadDBtIiwKICAgICAgICAibGFzdE5hbWUiOiAiQ29udGki
+      CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiZmlyc3ROYW1lIjogImZyYW5j
+      aXNjbyBqb3NlIiwKICAgICAgICAiaWQiOiAiV3lyNjFET3gweiIsCiAgICAg
+      ICAgImxhc3ROYW1lIjogImxhY2F6IHJ1aXoiCiAgICAgIH0sCiAgICAgIHsK
+      ICAgICAgICAiZmlyc3ROYW1lIjogIkpvc2UgTWFyY2VsbyIsCiAgICAgICAg
+      ImlkIjogIkduNm9rdDhyTFIiLAogICAgICAgICJsYXN0TmFtZSI6ICJHYWxl
+      dGkiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiZmlyc3ROYW1lIjogIkNo
+      YXJsZW5lIiwKICAgICAgICAiaWQiOiAiZS1qN0FQOXlCVSIsCiAgICAgICAg
+      Imxhc3ROYW1lIjogIkxpIgogICAgICB9CiAgICBdCiAgfQp9
+    http_version: '1.1'
