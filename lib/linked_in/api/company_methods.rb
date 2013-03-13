@@ -13,22 +13,23 @@ module LinkedIn
       # see:: http://developer.linkedin.com/docs/DOC-1259
       #
       def company(options={})
-        path = "/companies/"
-        
+        path = "/companies"
         # retrieve companies by email domain
         if options[:email_domain]
-          path = path.chomp('/') + "?email-domain=#{sanatize_value(options[:email_domain])}"
+          # define fields to retrieve 
+          path += field_selector(options[:fields]) if options[:fields]
+          path += "?email-domain=#{sanatize_value(options[:email_domain])}"
         else
           # retrieve company by id or universal name identification
           if options[:id]
-            path += options[:id]
+            path += "/#{options[:id]}"
           elsif options[:universal_name]
-            path += "universal-name=#{sanatize_value(options[:universal_name])}"
+            path += "/universal-name=#{sanatize_value(options[:universal_name])}"
           end
           # define fields to retrieve 
           path += field_selector(options[:fields]) if options[:fields]
         end
-        
+        puts "***** #{path} *****"
         Mash.from_json(get(path))
       end
       
