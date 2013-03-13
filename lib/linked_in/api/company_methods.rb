@@ -29,7 +29,6 @@ module LinkedIn
           # define fields to retrieve 
           path += field_selector(options[:fields]) if options[:fields]
         end
-        puts "***** #{path} *****"
         Mash.from_json(get(path))
       end
       
