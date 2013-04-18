@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<vcr>,       ["~> 1.6.0"])
     else
       s.add_dependency(%q<oauth>,       ["~> 0.4.0"])
-      s.add_dependency(%q<hashie>,      ["~> 1.1.0"])
+      s.add_dependency(%q<hashie>,      ["~> 1.2.0"])
       s.add_dependency(%q<multi_json>,  ["~> 1.3"])
       s.add_dependency(%q<yajl-ruby>,   ["~> 0.8.0"])
       s.add_dependency(%q<rspec>,       ["~> 2.4.0"])
